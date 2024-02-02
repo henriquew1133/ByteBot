@@ -78,12 +78,3 @@ client.on('messageCreate', (message) => {
 client.on('ready', async () => {
     console.log(`Bot está online como ${client.user.tag}`);
   
-    // Obtém a guilda/servidor (substitua '1083480923879780412' pelo ID real do servidor)
-    const guildId = '1083480923879780412';
-    const guild = client.guilds.cache.get(guildId);
-  
-    // Verifica se o servidor foi encontrado
-    if (!guild) {
-      console.error('Servidor não encontrado. Certifique-se de fornecer um ID de servidor válido.');
-      return;
-    }
