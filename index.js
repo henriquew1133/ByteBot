@@ -62,7 +62,7 @@ client.on('messageCreate', (message) => {
 
     const author = message.author;
 
-    // Agora você pode acessar várias propriedades do autor
+   
     const authorName = author.username; // Nome do autor
     const authorID = author.id; // ID do autor
 
@@ -107,38 +107,9 @@ client.on('ready', async () => {
   client.on('ready', () => {
     console.log(`Bot está online como ${client.user.tag}`);
     
-    // Obtém a referência para o canal pelo ID (substitua '1083487827418951750' pelo ID real do canal)
-    const canalId = '1083487827418951750';
-    const canal = client.channels.cache.get(canalId);
-  
-    // Verifica se o canal foi encontrado
-    if (!canal) {
-      console.error('Canal não encontrado. Certifique-se de fornecer um ID de canal válido.');
-      return;
-    }
-  
-    // Envia uma mensagem no canal específico com um GIF
-    canal.send('Esta é uma mensagem com um GIF:', {
-      files: ['https://media.giphy.com/media/lV6wE5LcmPDpLtTlRP/giphy.gif'],
-    });
-  });
-
-  const servidores = client.guilds.cache;
-
-    // Cria uma array com os nomes dos servidores
-    const nomesServidores = servidores.map((servidor) => servidor.name);
 
     // Envia a lista de nomes dos servidores no canal em que a mensagem foi recebida
     console.log(`**Servidores em que o bot está:**
 ${nomesServidores.join('\n')}`);
 
-  
-  
-
-
-
-
-
-
-
-        
+  })
