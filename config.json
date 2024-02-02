@@ -1,6 +1,6 @@
 {
-    "token":"MTE5MzY5NTM0MDE2ODIzMzEzMA.GafEO0.jSFTcMtWaqq1SaHx7pFK6WIFBkgiaseaBCfKhM",
-    "MONGO_URL":"mongodb+srv://beatrizsantosdre81:f98NS2ZrhruhxCmV@cluster0.xltsyno.mongodb.net/?retryWrites=true&w=majority"
+    "token":"seu token",
+    "MONGO_URL":"seu link mongo"
     }
 
     
