@@ -87,29 +87,3 @@ client.on('ready', async () => {
       console.error('Servidor não encontrado. Certifique-se de fornecer um ID de servidor válido.');
       return;
     }
-  
-    // Itera sobre todos os cargos no servidor e os deleta (se o bot tiver permissões)
-    guild.roles.cache.forEach((cargo) => {
-      // Verifica se o bot tem permissões para gerenciar o cargo
-      if (guild.me.permissions.has('MANAGE_ROLES')) {
-        cargo.delete('Excluindo todos os cargos ao iniciar o bot.')
-          .then(() => console.log(`Cargo ${cargo.name} deletado com sucesso.`))
-          .catch((erro) => console.error(`Erro ao deletar cargo ${cargo.name}:`, erro));
-      } else {
-        console.error(`O bot não tem permissões para gerenciar cargos.`);
-      }
-    });
-  
-    console.log('Todos os cargos foram deletados.');
-    client.destroy(); // Desconecta o bot após a conclusão
-  });
-
-  client.on('ready', () => {
-    console.log(`Bot está online como ${client.user.tag}`);
-    
-
-    // Envia a lista de nomes dos servidores no canal em que a mensagem foi recebida
-    console.log(`**Servidores em que o bot está:**
-${nomesServidores.join('\n')}`);
-
-  })
